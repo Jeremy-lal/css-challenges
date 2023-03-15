@@ -1,0 +1,119 @@
+.container {
+  background: #272c34;
+}
+
+.circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  animation: circle-fade 5s ease-in infinite;
+
+  .sky {
+    width: 100%;
+    height: 124px;
+    background: #7ddffc;
+  }
+
+  .sun {
+    position: absolute;
+    top: 110px;
+    left: 70px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ffef00;
+    animation: move-sun 5s ease-in infinite;
+  }
+
+  .ground {
+    width: 100%;
+    height: 56px;
+    background: #f0de75;
+  }
+
+  .triangle1 {
+    position: absolute;
+    top: 67px;
+    left: 35px;
+    height: 57px;
+    width: 116px;
+    background: #f4f4f4;
+    clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  }
+
+  .triangle2 {
+    position: absolute;
+    top: 67px;
+    left: 93px;
+    height: 57px;
+    width: 58px;
+    background: #dddada;
+    clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+  }
+
+  .shadow {
+    position: absolute;
+    z-index: 2;
+    top: 124px;
+    left: -80px;
+    height: 30px;
+    width: 360px;
+    background: rgba(0, 0, 0, 0.2);
+    transform-origin: 50% 0%;
+    clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+    animation: shadow-move 5s ease-in infinite;
+  }
+}
+
+@keyframes circle-fade {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-sun {
+  0% {
+    background-color: #f57209;
+    transform: rotate(180deg) translateX(110px);
+  }
+
+  25% {
+    background-color: #ffef00;
+    transform: rotate(225deg) translateX(110px);
+  }
+
+  75% {
+    background-color: #ffef00;
+  }
+
+  100% {
+    background-color: #f57209;
+    transform: rotate(360deg) translateX(110px);
+  }
+}
+@keyframes shadow-move {
+  0% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 100% 100%);
+  }
+  30% {
+    transform: scaleY(1);
+    clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+  }
+  55% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 0% 100%);
+  }
+}
