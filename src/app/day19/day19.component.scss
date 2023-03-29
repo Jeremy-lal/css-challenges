@@ -1,0 +1,78 @@
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+
+  .block {
+    min-width: 100%;
+    height: 400px;
+    background: #444;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .blue {
+    background: blue;
+  }
+  .green {
+    background: green;
+  }
+  .red {
+    background: red;
+  }
+
+  .actions {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 105px);
+    display: flex;
+
+    .circle {
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin: 10px;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .button {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      transform: translateX(0);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+.position-2 {
+  .block {
+    transform: translateX(-100%);
+  }
+
+  .actions {
+    .button {
+      transform: translateX(70px);
+    }
+  }
+}
+
+.position-3 {
+  .block {
+    transform: translateX(-200%);
+  }
+
+  .actions {
+    .button {
+      transform: translateX(140px);
+    }
+  }
+}
