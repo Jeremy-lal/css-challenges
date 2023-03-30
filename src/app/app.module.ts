@@ -16,6 +16,7 @@ import { Day13Component } from './day13/day13.component';
 import { Day24Component } from './day24/day24.component';
 import { Day18Component } from './day18/day18.component';
 import { Day19Component } from './day19/day19.component';
+import { Day21Component } from './day21/day21.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { Day19Component } from './day19/day19.component';
     Day13Component,
     Day24Component,
     Day18Component,
-    Day19Component
+    Day19Component,
+    Day21Component
   ],
   imports: [
     BrowserModule,
